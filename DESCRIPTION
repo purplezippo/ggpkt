@@ -1,0 +1,30 @@
+Package: ggyik
+Type: Package
+Title: YIK Themes for Data Vis and Customized Geoms.
+Version: 0.0.0.9000
+Authors@R: c(person("Zhen Ji", role = c("aut", "cre", "ctb"),
+    email = "1059779096@qq.com"))
+Maintainer: The package maintainer <1059779096@qq.com>
+Depends:
+    R (>= 3.0.0)
+Imports:
+    ggplot2 (>= 3.0.0),
+    graphics,
+    grid,
+    waterfalls,
+    scales
+Suggests:
+    dplyr,
+    knitr,
+    lattice,
+    rmarkdown,
+    testthat,
+    tidyr
+Description: Provide customized themes and figures for writting reports, PPT
+  and other data analysis work.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
