@@ -15,44 +15,54 @@
 #'
 #' @family figures
 #' @export
-fig_waterfull <- function(values, start_label = 'start', end_label = 'end'){
+fig_waterfall <- function(
+  values,
+  colors = c('start' = '#558ED5', 'increase' = '#51A047', 'reduce' = '#F1B255'),
+  start_label = 'start', end_label = 'end'){
   labels <- c(start_label)
-  fill_colors <- c('darkslateblue')
+  fill_colors <- c(colors[1])
   for (i in values[-1]) {
     if (i > 0) {
       labels <- c(labels, '增加')
-      fill_colors <- c(fill_colors, '#FF7F0E')
+      fill_colors <- c(fill_colors, colors[2])
     } else if (i < 0) {
       labels <- c(labels, '减少')
-      fill_colors <- c(fill_colors, '#1F77B4')
+      fill_colors <- c(fill_colors, colors[3])
     } else {
       stop('Values must be none zero.')
     }
   }
 
   plot.data <- data.frame(
-    label = labels,
+    label = as.character(1:length(labels)),
     value = values, stringsAsFactors = F
   )
 
-  fig <- waterfall(
-    .data = plot.data ,
-    rect_text_labels = paste(plot.data$label,'\n',plot.data$value),
-    rect_text_size = 1.3,
+  set_fonts()
+
+  fig <- mywf(
+    .data = plot.data,
+    values = NA,
+    rect_text_labels = paste(labels,'\n', values),
+    rect_text_size = 1.5,
+    rect_text_color = '#2F3038',
+    theme_text_family = 'thefont',
     fill_colours = fill_colors,
     calc_total = TRUE,
-    total_rect_color = "darkslateblue",
-    total_rect_text = paste(end_label,'\n',sum(plot.data$value)),
-    total_rect_text_color = "black",
-    total_axis_text = end_label,
+    total_rect_color = colors[1],
+    total_rect_text = paste(end_label,'\n',sum(values)),
+    total_rect_text_color = "#2F3038",
+    total_axis_text = as.character(length(labels) + 1),
     rect_width = 0.6,
     draw_axis.x = "behind",
     rect_border = "white",
     fill_by_sign = FALSE
   ) +
-    theme_report01() +
-    theme(axis.title.x = element_blank()) +
-    geom_hline(yintercept = 0, colour = 'grey30') +
-    scale_y_continuous('')
+    ggpkt::theme_rp_light() +
+    ggplot2::theme(
+      axis.title.x = element_blank()
+      ) +
+    ggplot2::geom_hline(yintercept = 0, colour = 'grey30') +
+    ggplot2::scale_y_continuous('')
   return(fig)
 }

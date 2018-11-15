@@ -1,4 +1,4 @@
-Package: ggyik
+Package: ggpkt
 Type: Package
 Title: YIK Themes for Data Vis and Customized Geoms.
 Version: 0.0.0.9000
@@ -11,15 +11,18 @@ Imports:
     ggplot2 (>= 3.0.0),
     graphics,
     grid,
-    waterfalls,
+    magrittr,
     scales
 Suggests:
+    reshape2,
     dplyr,
+    lubridate,
     knitr,
     lattice,
     rmarkdown,
     testthat,
-    tidyr
+    tidyr,
+    sysfonts
 Description: Provide customized themes and figures for writting reports, PPT
   and other data analysis work.
 License: GPL-2
