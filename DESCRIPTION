@@ -22,6 +22,7 @@ Suggests:
     rmarkdown,
     testthat,
     tidyr,
+    tibble,
     sysfonts
 Description: Provide customized themes and figures for writting reports, PPT
   and other data analysis work.

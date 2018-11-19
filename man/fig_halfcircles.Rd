@@ -2,9 +2,13 @@
 % Please edit documentation in R/figure_halfcircles.R
 \name{fig_halfcircles}
 \alias{fig_halfcircles}
+\alias{fig_halfcircles_emph}
 \title{Circle Chart for Data Comparison}
 \usage{
 fig_halfcircles(rawdata, title, subtitle, caption, palette = "Oranges")
+
+fig_halfcircles_emph(rawdata, title, subtitle, caption,
+  colours = c("white", "orange"))
 }
 \arguments{
 \item{rawdata}{A \code{data.frame} contains the data to be plot. Three columns
@@ -19,9 +23,12 @@ data.}
 \item{caption}{\code{character} value defines the caption.}
 
 \item{palette}{Palette applied to the plot.}
+
+\item{colours}{A \code{vector} of length two, contains colours which applied
+to different data.}
 }
 \description{
-Show all datas in a sequential way.
+Show all datas in a sequential way, and emphasis the special one.
 }
 \examples{
 rawdata <- data.frame(
@@ -55,6 +62,6 @@ fig_halfcircles_emph(rawdata, title = '数据分析各环节耗时', subtitle = 
 \seealso{
 \code{\link{fig_halfcircles_emph}()} for references.
 
-Other figure circle: \code{\link{fig_halfcircles_emph}}
+\code{\link{fig_halfcircles}()} for references.
 }
 \concept{figure circle}

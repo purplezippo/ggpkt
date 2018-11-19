@@ -1,6 +1,6 @@
 #' Circle Chart for Data Comparison
 #'
-#' Show all datas in a sequential way.
+#' Show all datas in a sequential way, and emphasis the special one.
 #'
 #' @param rawdata A \code{data.frame} contains the data to be plot. Three columns
 #'   are needed here, 'values': numeric, provide datas; 'types': used to map colours
@@ -61,20 +61,12 @@ fig_halfcircles <- function(
 }
 
 
-#' Circle Chart for Data Comparison
-#'
-#' Emphasis the special data.
-#'
-#' @inheritParams fig_halfcircles
-#'
 #' @param colours A \code{vector} of length two, contains colours which applied
 #'  to different data.
 #'
 #' @seealso \code{\link{fig_halfcircles}()} for references.
 #'
-#' @example inst/examples/ex-halfcircles.R
-#'
-#' @family figure circle
+#' @rdname fig_halfcircles
 #'
 #' @export
 fig_halfcircles_emph <- function(

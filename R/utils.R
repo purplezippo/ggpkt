@@ -1,3 +1,14 @@
+# 将因子按照其出现的顺序排序
+fac_raworder <- function(f, ordered = F){
+  idx <- as.integer(f)[!duplicated(f)]
+  idx <- idx[!is.na(idx)]
+  raw_levels <- levels(f)[idx]
+  new_f <- factor(f, levels = raw_levels, exclude = NULL, ordered = T)
+  attributes(new_f) <- utils::modifyList(attributes(f), attributes(new_f))
+  return(new_f)
+}
+
+
 # 字体
 set_fonts <- function(){
   if (Sys.info()[['sysname']] == 'Windows') {

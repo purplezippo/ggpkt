@@ -6,3 +6,5 @@ rawdata <- data.frame(
   values = runif(numx*numy, min = 5, max = 30),
   stringsAsFactors = F
 )
+
+fig_bubble_rect(rawdata)
