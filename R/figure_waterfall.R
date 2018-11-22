@@ -2,10 +2,12 @@
 #'
 #' waterfull with bars.
 #'
-#' @param overlap \code{logical} Use the scale for overlapping points?
+#' @param values Vector contains increase or reduce data.
+#' @param colors Named vector, defines the colours used to fill the rects.
+#' @param start_label Character.
+#' @param end_label Character
 #'
 #' @note
-#'
 #' This function is customizated by using the \code{waterfall()} function
 #' from package waterfalls
 #'
@@ -19,14 +21,15 @@ fig_waterfall <- function(
   values,
   colors = c('start' = '#558ED5', 'increase' = '#51A047', 'reduce' = '#F1B255'),
   start_label = 'start', end_label = 'end'){
+  set_fonts()
   labels <- c(start_label)
   fill_colors <- c(colors[1])
   for (i in values[-1]) {
     if (i > 0) {
-      labels <- c(labels, '增加')
+      labels <- c(labels, 'increase')
       fill_colors <- c(fill_colors, colors[2])
     } else if (i < 0) {
-      labels <- c(labels, '减少')
+      labels <- c(labels, 'reduce')
       fill_colors <- c(fill_colors, colors[3])
     } else {
       stop('Values must be none zero.')
@@ -46,7 +49,7 @@ fig_waterfall <- function(
     rect_text_labels = paste(labels,'\n', values),
     rect_text_size = 1.5,
     rect_text_color = '#2F3038',
-    theme_text_family = 'thefont',
+    theme_text_family = NA,
     fill_colours = fill_colors,
     calc_total = TRUE,
     total_rect_color = colors[1],

@@ -52,9 +52,11 @@ accordingly.
 }
 \examples{
 rawdata <- data.frame(
-  works = c('需求分析和确认', '算法1研发', '算法2研发', '算法3研发',
-            '系统框架构建', '分析系统开发', '数据库构建', '系统集成部署',
-            '试运行', '交付验收'),
+  works =
+    c('Requirements Analysis and Validation', 'Alogrithm 1', 'Alogrithm 2',
+      'Alogrithm 3', 'Build System Framwork', 'System Development',
+      'Data Base', 'System Deployment', 'Test Run', 'Acceptance'
+      ),
   start_time = as.Date(
     c('2018-01-01', '2018-01-20','2018-02-15','2018-03-20', '2018-04-01',
       '2018-05-01','2018-06-30','2018-08-01', '2018-09-01','2018-10-30')
@@ -82,7 +84,7 @@ fig_gantt(rawdata[, c('works', 'start_time_real', 'end_time_real')],
           type = 'real', colors.rect = 'red')
 
 fig_gantt(rawdata[, c('works', 'start_time_real', 'end_time_real')],
-          type = 'real', colors.rect = 'red', islegend = F)
+          type = 'real', colors.rect = 'red', islegend = FALSE)
 }
 \seealso{
 Other figures: \code{\link{fig_waterfall}}

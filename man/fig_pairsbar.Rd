@@ -49,9 +49,9 @@ rawdata <- data.frame(
 )
 fig_pairsbar(rawdata, labelspan.num = 0.5, labelspan.lab = 0.8)
 
-fig_pairsbar(rawdata, labelspan.num = 0.5, labelspan.lab = 0.8, ishorizontal = F)
+fig_pairsbar(rawdata, labelspan.num = 0.5, labelspan.lab = 0.8, ishorizontal = FALSE)
 
-fig_pairsbar(rawdata, labelspan.num = 0.5, labelspan.lab = 0.8, ishorizontal = F,
+fig_pairsbar(rawdata, labelspan.num = 0.5, labelspan.lab = 0.8, ishorizontal = FALSE,
              bar.width = 0.7)
 }
 \concept{figures utils}

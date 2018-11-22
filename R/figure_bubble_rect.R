@@ -20,9 +20,11 @@
 #' @export
 fig_bubble_rect <- function(
   rawdata, text.size.x = 12, text.size.y = 12, palette = 'Spectral',
-  bubble.size.range = c(3, 15)){
+  bubble.size.range = c(3, 15)
+  ){
+  set_fonts()
   temp_theme <- theme_light() + theme(
-    # 字体
+    # fonts
     title = element_text(size = 15, colour = 'black'),
     legend.text = element_text(size = 8),
     legend.title = element_text(size = 10),
@@ -30,16 +32,17 @@ fig_bubble_rect <- function(
     axis.text.y = element_text(size = text.size.y),
     axis.title.x = element_text(size = 10),
     axis.title.y = element_text(size = 10),
-    # 网格线
+    # grids
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank(),
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
     panel.background = element_rect(fill = 'white'),
-    # 边框
+    # frams
     panel.border = element_blank(),
-    ##标题
-    plot.title = element_text(hjust = 0.5, size = 12)
+    # titles
+    plot.title = element_text(hjust = 0.5, size = 12),
+    plot.margin = margin(t = 15, r = 15, b = 5, l = 5, unit = "pt")
   )
   rawdata$xlabel <- factor(rawdata$xlabel)
   rawdata$ylabel <- factor(rawdata$ylabel)
@@ -66,5 +69,4 @@ fig_bubble_rect <- function(
     scale_fill_brewer(palette = 'Spectral') +
     scale_x_continuous('', breaks = 1:num.x, labels = levels(rawdata$xlabel)) +
     scale_y_continuous('', breaks = 1:num.y, labels = levels(rawdata$ylabel))
-
 }

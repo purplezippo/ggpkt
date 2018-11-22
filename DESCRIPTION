@@ -1,6 +1,6 @@
 Package: ggpkt
 Type: Package
-Title: YIK Themes for Data Vis and Customized Geoms.
+Title: YIK Themes and Customized Geoms for Data Vis.
 Version: 0.0.0.9000
 Authors@R: c(person("Zhen Ji", role = c("aut", "cre", "ctb"),
     email = "1059779096@qq.com"))
@@ -12,17 +12,21 @@ Imports:
     graphics,
     grid,
     magrittr,
-    scales
-Suggests:
-    reshape2,
+    scales,
+    RColorBrewer,
     dplyr,
+    tibble,
+    methods
+Suggests:
+    stats,
+    png,
+    reshape2,
     lubridate,
     knitr,
     lattice,
     rmarkdown,
     testthat,
     tidyr,
-    tibble,
     sysfonts
 Description: Provide customized themes and figures for writting reports, PPT
   and other data analysis work.

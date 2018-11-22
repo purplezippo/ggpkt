@@ -27,7 +27,7 @@ fig_pairsbar <- function(
   colors = c('#F1B255', '#51A047'), title = '', subtitle.left = '',
   subtitle.right = ''
   ){
-  # set_fonts()  # 字体
+  set_fonts()
 
   rawdata <- rawdata[order(rawdata$num_left, decreasing = decreasing),]
   rawdata$id <- 1:nrow(rawdata)
@@ -37,7 +37,7 @@ fig_pairsbar <- function(
     geom_bar(aes(x = id, y = -num_left), stat = "identity", fill = colors[1],
              colour = NA, width = bar.width) +
     geom_text(aes(x = id, y = -num_left - labelspan.num, label = num_left),
-              size = num.size, family = 'thefont', fontface = "bold") +
+              size = num.size, fontface = "bold") +
     theme_void() +
     ylim(-max(rawdata$num_left) - labelspan.num, 0) +
     scale_x_reverse()
@@ -49,7 +49,7 @@ fig_pairsbar <- function(
     geom_text(aes(x = id, y = -labelspan.lab, label = labs),
               vjust = .5, size = label.size) +
     geom_text(aes(x = id, y = num_right + labelspan.num, label = num_right),
-              size = num.size,family = 'thefont', fontface = "bold") +
+              size = num.size, fontface = "bold") +
     theme_void() +
     ylim(-labelspan.lab, max(rawdata$num_right) + labelspan.num) +
     scale_x_reverse()

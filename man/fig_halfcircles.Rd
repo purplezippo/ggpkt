@@ -36,13 +36,13 @@ rawdata <- data.frame(
              934.5, 985.6),
   types = letters[1:9],
   labels = c(
-    '原型构建', '参数调试', '模型优化', '模型训练', '业务理解',
-    '资料检索', '数据采集(爬虫、文档、线上、线下)',
-    '分析系统开发(UI设计, 数据库设计, 模型部署, 模型应用)', '数据清洗'),
-  stringsAsFactors = F
+    'proto type', 'fine tuning', 'model optimization', 'model training', 'business research',
+    'file research', 'data collection(spyder、document literature、online、offline)',
+    'analysis system development(UI design, data base design, model deploy, model apply)', 'data clean'),
+  stringsAsFactors = FALSE
 )
-fig_halfcircles(rawdata, title = '数据分析各环节耗时', subtitle = 'hours',
-                caption = '注：数据纯属虚构')
+fig_halfcircles(rawdata, title = 'Time Consuming in Data Analysis Projects', subtitle = 'hours',
+                caption = 'Note: these datas are all made out of whole cloth.')
 
 
 rawdata <- data.frame(
@@ -50,13 +50,13 @@ rawdata <- data.frame(
              934.5, 985.6),
   types = c('a','a','a','a','a','a', 'b', 'a', 'a'),
   labels = c(
-    '原型构建', '参数调试', '模型优化', '模型训练', '业务理解',
-    '资料检索', '数据采集(爬虫、文档、线上、线下)',
-    '分析系统开发(UI设计, 数据库设计, 模型部署, 模型应用)', '数据清洗'),
-  stringsAsFactors = F
+    'proto type', 'fine tuning', 'model optimization', 'model training', 'business research',
+    'file research', 'data collection(spyder、document literature、online、offline)',
+    'analysis system development(UI design, data base design, model deploy, model apply)', 'data clean'),
+  stringsAsFactors = FALSE
 )
-fig_halfcircles_emph(rawdata, title = '数据分析各环节耗时', subtitle = 'hours',
-                     caption = '注：数据纯属虚构')
+fig_halfcircles_emph(rawdata, title = 'Time Consuming in Data Analysis Projects', subtitle = 'hours',
+                     caption = 'Note: these datas are all made out of whole cloth.')
 
 }
 \seealso{

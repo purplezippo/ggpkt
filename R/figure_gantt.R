@@ -56,7 +56,7 @@ fig_gantt <- function(
       works = rep(rawdata$works, 2),
       start_time = c(rawdata$start_time, rawdata$start_time_real),
       end_time = c(rawdata$end_time, rawdata$end_time_real),
-      types = rep(c('计划', '实际'), each = works.num)
+      types = rep(c('PLAN', 'ACTUAL'), each = works.num)
     )
   } else if (ncol(rawdata) == 3) {
     rawdata.long <- data.frame(
@@ -65,9 +65,9 @@ fig_gantt <- function(
       end_time = c(rawdata$end_time)
     )
     if (type == 'plan') {
-      rawdata.long$types = rep(c('计划'), each = works.num)
+      rawdata.long$types = rep(c('PLAN'), each = works.num)
     } else if (type == 'real') {
-      rawdata.long$types = rep(c('实际'), each = works.num)
+      rawdata.long$types = rep(c('ACTUAL'), each = works.num)
     }
 
   }
@@ -114,7 +114,7 @@ fig_gantt <- function(
       axis.ticks.y = element_blank(),
       panel.background = element_rect(fill = "white"),
       axis.text = element_text(
-        colour = "black", size = 10, face = "bold", family = "thefont"
+        colour = "black", size = 10, face = "bold"
         ),
       axis.line.x = element_line(),
       panel.spacing = unit(-0.3,"cm")
@@ -135,12 +135,12 @@ fig_gantt <- function(
   if (ncol(rawdata) == 5) {
     pic <- pic +
       geom_linerange(
-        data = rawdata.long[rawdata.long$types == '计划',],
+        data = rawdata.long[rawdata.long$types == 'PLAN',],
         aes(x = works, ymin = start_time, ymax = end_time, color = types),
         size = size.plan, alpha = .5
       ) +
       geom_linerange(
-        data = rawdata.long[rawdata.long$types == '实际',],
+        data = rawdata.long[rawdata.long$types == 'ACTUAL',],
         aes(x = works, ymin = start_time, ymax = end_time, color = types),
         size = size.real, alpha = .5
       )

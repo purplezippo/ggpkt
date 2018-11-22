@@ -8,7 +8,13 @@ fig_waterfall(values, colors = c(start = "#558ED5", increase = "#51A047",
   reduce = "#F1B255"), start_label = "start", end_label = "end")
 }
 \arguments{
-\item{overlap}{\code{logical} Use the scale for overlapping points?}
+\item{values}{Vector contains increase or reduce data.}
+
+\item{colors}{Named vector, defines the colours used to fill the rects.}
+
+\item{start_label}{Character.}
+
+\item{end_label}{Character}
 }
 \description{
 waterfull with bars.
@@ -19,13 +25,13 @@ from package waterfalls
 }
 \examples{
 fig_waterfall(values = c(200, -50, 70),
-              start_label = '开始', end_label = '结束')
+              start_label = 'start', end_label = 'end')
 
 fig_waterfall(values = c(200, -50, -19, 70),
-              start_label = '开始', end_label = '结束')
+              start_label = 'start', end_label = 'end')
 
 fig_waterfall(values = c(200, -50, -19, 70, 30, 13, -5, 19),
-              start_label = '开始', end_label = '结束')
+              start_label = 'start', end_label = 'end')
 
 }
 \references{

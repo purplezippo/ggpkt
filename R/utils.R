@@ -1,4 +1,4 @@
-# 将因子按照其出现的顺序排序
+# reorder factor by its raw order
 fac_raworder <- function(f, ordered = F){
   idx <- as.integer(f)[!duplicated(f)]
   idx <- idx[!is.na(idx)]
@@ -9,17 +9,16 @@ fac_raworder <- function(f, ordered = F){
 }
 
 
-# 字体
+# font
 set_fonts <- function(){
   if (Sys.info()[['sysname']] == 'Windows') {
-    windowsFonts('thefont' = windowsFont("微软雅黑"))
+    windowsFonts('thefont' = windowsFont("yahei"))
   } else {
     sysfonts::font_add('thefont', "wqy-zenhei.ttc")
   }
 }
-set_fonts()
 
-# 瀑布图
+# waterfall
 mywf <- function(
   .data = NULL,
   values,

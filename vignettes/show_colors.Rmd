@@ -1,10 +1,10 @@
 ---
-title: "show_colors"
+title: "show colors"
 author: "muscle"
-date: "2018年11月12日"
+date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Extending ggplot2}
+  %\VignetteIndexEntry{show_colors}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,6 +12,7 @@ vignette: >
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.width = 7, fig.height = 7, fig.align = "center")
 library(scales)
+library(RColorBrewer)
 ```
 
 介绍获取色彩的一些途径。
@@ -31,7 +32,6 @@ cm.colors(n, alpha = 1)
 ### 1.1 绘制基础调色板
 
 ```{r pressure, echo=FALSE}
-library(scales)
 show_col(rainbow(10),labels = T)
 ```
 
@@ -67,11 +67,6 @@ show_col(colours(), labels = F)
 
 
 ## 2 RColorBrewer
-
-```{r}
-library(RColorBrewer)
-```
-
 
 ### 2.1 ColorBrewer调色板
 所有调色板
