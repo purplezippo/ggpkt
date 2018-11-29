@@ -39,6 +39,7 @@ fig_bubble_rect(rawdata)
 }
 \seealso{
 Other figure: \code{\link{fig_calendar}},
-  \code{\link{fig_event_storm}}
+  \code{\link{fig_event_line}},
+  \code{\link{fig_event_storm}}, \code{\link{fig_parallel}}
 }
 \concept{figure}

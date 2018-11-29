@@ -83,6 +83,7 @@ fig_event_storm(rawdata, islegend = FALSE)
 }
 \seealso{
 Other figure: \code{\link{fig_bubble_rect}},
-  \code{\link{fig_calendar}}
+  \code{\link{fig_calendar}}, \code{\link{fig_event_line}},
+  \code{\link{fig_parallel}}
 }
 \concept{figure}

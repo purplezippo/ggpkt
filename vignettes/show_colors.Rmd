@@ -31,11 +31,10 @@ cm.colors(n, alpha = 1)
 
 ### 1.1 绘制基础调色板
 
-```{r pressure, echo=FALSE}
+```{r pressure}
 show_col(rainbow(10),labels = T)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ### 1.2 创建调色板
 

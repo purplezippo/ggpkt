@@ -91,6 +91,7 @@ num <- 180
 }
 \seealso{
 Other figure: \code{\link{fig_bubble_rect}},
-  \code{\link{fig_event_storm}}
+  \code{\link{fig_event_line}},
+  \code{\link{fig_event_storm}}, \code{\link{fig_parallel}}
 }
 \concept{figure}

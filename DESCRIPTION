@@ -2,8 +2,10 @@ Package: ggpkt
 Type: Package
 Title: YIK Themes and Customized Geoms for Data Vis.
 Version: 0.0.0.9000
-Authors@R: c(person("Zhen Ji", role = c("aut", "cre", "ctb"),
-    email = "1059779096@qq.com"))
+Authors@R: c(person("Zhen", "Ji", role = c("aut", "cre", "ctb"),
+    email = "1059779096@qq.com"),
+    person("Man", "Shi", role = "ctb"),
+    person("Mingrui", "Zhou", role = "ctb"))
 Maintainer: The package maintainer <1059779096@qq.com>
 Depends:
     R (>= 3.0.0)
