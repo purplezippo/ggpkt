@@ -63,6 +63,6 @@ p2 + theme_yk_business_light(base_family = 'yahei') +
 }
 \seealso{
 Other themes: \code{\link{theme_rp_light}},
-  \code{\link{theme_yk_academic_light}}
+  \code{\link{theme_yk_academic}}
 }
 \concept{themes}

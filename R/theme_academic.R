@@ -4,6 +4,7 @@
 #'
 #' @inheritParams ggplot2::scale_colour_hue
 #' @inheritParams pal_academic
+#'
 #' @family colour academic
 #' @rdname scale_academic
 #' @seealso \code{\link{theme_yk_academic_light}()} for examples.
@@ -42,14 +43,41 @@ scale_fill_academic_dark <- function(...) {
 
 #' ggplot color theme for academic files
 #'
-#' A theme that can be used in \emph{academic} scenes.
-#'
-#' Use \code{\link{scale_color_academic_light}()} with this theme.
+#' Themes that can be used in \emph{academic} scenes.
 #'
 #' @inheritParams ggplot2::theme_grey
 #' @return An object of class \code{\link[ggplot2]{theme}()}.
+#'
 #' @rdname theme_yk_academic
 #' @family themes
+#'
+#' @details
+#' \describe{
+#'
+#'
+#' \item{`theme_yk_academic_common`}{
+#' The signature yik-academic theme.
+#' }
+#'
+#' \item{`theme_yk_academic_brief`}{
+#' A theme in designed to show figures in a brief way.
+#' }
+#'
+#' \item{`theme_yk_academic_light`}{
+#' A theme like `theme_yk_academic_common`.
+#' }
+#'
+#' \item{`theme_yk_academic_dark`}{
+#' A theme with dark apperence, in the opposit of `theme_yk_academic_light`.
+#' }
+#'
+#' \item{`theme_yk_academic_dotted_gray`}{
+#' A theme with only dotted horizontal grid lines and light background.
+#' }
+#'
+#' }
+#'
+#' @name theme_yk_academic
 #'
 #' @example inst/examples/ex-theme_academic.R
 #' @export

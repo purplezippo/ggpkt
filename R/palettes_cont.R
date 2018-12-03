@@ -57,7 +57,7 @@ fa_business_scale <- function(aesthetics = "fill"){
 }
 
 
-#' Scalses for continuous values
+#' Scales for continuous values
 #'
 #' @param col.sacheme Only valid with continuous scales, for now only two colour
 #' schemes(\code{c('red', 'blue')}) are provided.

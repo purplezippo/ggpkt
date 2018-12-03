@@ -52,7 +52,37 @@ scale_fill_business_dark <- function(...) {
 #' @inheritParams ggplot2::theme_grey
 #' @return An object of class \code{\link[ggplot2]{theme}()}.
 #' @rdname theme_yk_business
+#' @name theme_yk_business
 #' @family themes
+#'
+#' @details
+#' \describe{
+#'
+#' \item{`theme_yk_business_light`}{
+#' The signature yik-business theme.
+#' }
+#'
+#' \item{`theme_yk_business_dark`}{
+#' The opposit of theme `theme_yk_business_light`
+#' }
+#'
+#' \item{`theme_yk_business_brief`}{
+#' A theme in designed to show figures in a brief way.
+#' }
+#'
+#' \item{`theme_yk_business_light_solid`}{
+#' A theme similar to `theme_yk_business_light` but with solid lines.
+#' }
+#'
+#' \item{`theme_yk_business_dotted_lightblue`}{
+#' A theme with dotted grid lines and light blue background.
+#' }
+#'
+#' \item{`theme_yk_business_blue`}{
+#' A theme with blue background.
+#' }
+#'
+#' }
 #'
 #' @example inst/examples/ex-theme_business.R
 #' @export

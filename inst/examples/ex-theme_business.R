@@ -1,3 +1,4 @@
+library(ggplot2)
 data(medical_cpi)
 head(medical_cpi)
 

@@ -30,7 +30,7 @@ p + theme_rp_light()
 
 }
 \seealso{
-Other themes: \code{\link{theme_yk_academic_light}},
+Other themes: \code{\link{theme_yk_academic}},
   \code{\link{theme_yk_business_brief}}
 }
 \concept{themes}
