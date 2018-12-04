@@ -28,6 +28,15 @@ check_pal_n <- function(n, max_n) {
   }
 }
 
+
+# factory function to create colour scales.
+fa_scale_cols <- function(scl = 'colour', sname = 'business', fpal){
+  temp <- function(...) {
+    discrete_scale(scl, sname, fpal, ...)
+  }
+  return(temp)
+}
+
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##--------------------------------------------####
 
 # waterfall

@@ -75,6 +75,6 @@ p + theme_yk_academic_dark(base_family = 'yahei') +
 }
 \seealso{
 Other themes: \code{\link{theme_rp_light}},
-  \code{\link{theme_yk_business_brief}}
+  \code{\link{theme_yk_business}}
 }
 \concept{themes}

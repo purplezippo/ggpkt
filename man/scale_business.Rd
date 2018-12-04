@@ -5,8 +5,19 @@
 \alias{scale_color_business_light}
 \alias{scale_colour_business_dark}
 \alias{scale_color_business_dark}
+\alias{scale_colour_business_bright}
+\alias{scale_color_business_warm}
+\alias{scale_colour_business_grey}
+\alias{scale_color_business_grey}
+\alias{scale_colour_business_warm}
+\alias{scale_colour_business_cool}
+\alias{scale_color_business_cool}
 \alias{scale_fill_business_light}
 \alias{scale_fill_business_dark}
+\alias{scale_fill_business_bright}
+\alias{scale_fill_business_grey}
+\alias{scale_fill_business_warm}
+\alias{scale_fill_business_cool}
 \title{YIK business color scales}
 \usage{
 scale_colour_business_light(...)
@@ -17,9 +28,33 @@ scale_colour_business_dark(...)
 
 scale_color_business_dark(...)
 
+scale_colour_business_bright(...)
+
+scale_color_business_warm(...)
+
+scale_colour_business_grey(...)
+
+scale_color_business_grey(...)
+
+scale_colour_business_warm(...)
+
+scale_color_business_warm(...)
+
+scale_colour_business_cool(...)
+
+scale_color_business_cool(...)
+
 scale_fill_business_light(...)
 
 scale_fill_business_dark(...)
+
+scale_fill_business_bright(...)
+
+scale_fill_business_grey(...)
+
+scale_fill_business_warm(...)
+
+scale_fill_business_cool(...)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{discrete_scale}
@@ -80,6 +115,6 @@ Color scales using the colors in the business scenes.
 \seealso{
 \code{\link{theme_yk_business_light}()} for examples.
 
-Other colour business: \code{\link{pal_business}}
+Other colour business: \code{\link{yik_palette_disc}}
 }
 \concept{colour business}

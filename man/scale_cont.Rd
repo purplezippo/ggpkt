@@ -4,7 +4,7 @@
 \alias{scale_fill_continuous_yk}
 \alias{scale_colour_continuous_yk}
 \alias{scale_color_continuous_yk}
-\title{Scalses for continuous values}
+\title{Scales for continuous values}
 \usage{
 scale_fill_continuous_yk(..., col.scheme = "red", na.value = "grey50",
   guide = "colourbar")
@@ -20,5 +20,5 @@ scale_color_continuous_yk(..., col.scheme = "red", na.value = "grey50",
 schemes(\code{c('red', 'blue')}) are provided.}
 }
 \description{
-Scalses for continuous values
+Scales for continuous values
 }

@@ -1,17 +1,22 @@
+fa_scale_cols <- function(scl = 'colour', sname = 'business', fpal){
+  temp <- function(...) {
+    discrete_scale(scl, sname, fpal, ...)
+  }
+  return(temp)
+}
+
 #' YIK academic color scales
 #'
 #' Color scales using the colors in the academic scenes.
 #'
 #' @inheritParams ggplot2::scale_colour_hue
-#' @inheritParams pal_academic
+#' @inheritParams pal_academic_light()
 #'
 #' @family colour academic
 #' @rdname scale_academic
 #' @seealso \code{\link{theme_yk_academic_light}()} for examples.
 #' @export
-scale_colour_academic_light <- function(...) {
-  discrete_scale("colour", "academic", pal_academic(isdark = FALSE), ...)
-}
+scale_colour_academic_light <- fa_scale_cols(sname = 'academic', fpal = ggpkt::pal_academic_light())
 
 #' @rdname scale_academic
 #' @export
@@ -19,25 +24,20 @@ scale_color_academic_light <- scale_colour_academic_light
 
 #' @rdname scale_academic
 #' @export
-scale_colour_academic_dark <- function(...) {
-  discrete_scale("colour", "academic", pal_academic(isdark = TRUE), ...)
-}
+scale_colour_academic_dark <- fa_scale_cols(sname = 'academic', fpal = ggpkt::pal_academic_dark())
 
 #' @rdname scale_academic
 #' @export
 scale_color_academic_dark <- scale_colour_academic_dark
 
+# ~~~~~~~~~~~~ scale fill ~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname scale_academic
 #' @export
-scale_fill_academic_light <- function(...) {
-  discrete_scale("fill", "academic", pal_academic(isdark = FALSE), ...)
-}
+scale_fill_academic_light <- fa_scale_cols('fill', 'academic', ggpkt::pal_academic_light())
 
 #' @rdname scale_academic
 #' @export
-scale_fill_academic_dark <- function(...) {
-  discrete_scale("fill", "academic", pal_academic(isdark = TRUE), ...)
-}
+scale_fill_academic_dark <- fa_scale_cols('fill', 'academic', ggpkt::pal_academic_dark())
 
 #~~~~~~~~~~~~~~~ themes ~~~~~~~~~~~~~~#-------------------------------------####
 

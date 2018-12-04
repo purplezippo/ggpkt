@@ -31,6 +31,6 @@ p + theme_rp_light()
 }
 \seealso{
 Other themes: \code{\link{theme_yk_academic}},
-  \code{\link{theme_yk_business_brief}}
+  \code{\link{theme_yk_business}}
 }
 \concept{themes}

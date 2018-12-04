@@ -3,14 +3,12 @@
 #' Color scales using the colors in the business scenes.
 #'
 #' @inheritParams ggplot2::scale_colour_hue
-#' @inheritParams pal_business
+#' @inheritParams pal_business_light()
 #' @family colour business
 #' @rdname scale_business
 #' @seealso \code{\link{theme_yk_business_light}()} for examples.
 #' @export
-scale_colour_business_light <- function(...) {
-  discrete_scale("colour", "business", ggpkt::pal_business(isdark = FALSE), ...)
-}
+scale_colour_business_light <- fa_scale_cols(fpal = ggpkt::pal_business_light())
 
 #' @rdname scale_business
 #' @export
@@ -18,9 +16,7 @@ scale_color_business_light <- scale_colour_business_light
 
 #' @rdname scale_business
 #' @export
-scale_colour_business_dark <- function(...) {
-  discrete_scale("colour", "business", ggpkt::pal_business(isdark = TRUE), ...)
-}
+scale_colour_business_dark <- fa_scale_cols(fpal = ggpkt::pal_business_dark())
 
 #' @rdname scale_business
 #' @export
@@ -28,15 +24,62 @@ scale_color_business_dark <- scale_colour_business_dark
 
 #' @rdname scale_business
 #' @export
-scale_fill_business_light <- function(...) {
-  discrete_scale("fill", "business", ggpkt::pal_business(isdark = FALSE), ...)
-}
+scale_colour_business_bright <- fa_scale_cols(fpal = ggpkt::pal_business_bright())
 
 #' @rdname scale_business
 #' @export
-scale_fill_business_dark <- function(...) {
-  discrete_scale("fill", "business", ggpkt::pal_business(isdark = TRUE), ...)
-}
+scale_color_business_warm <- scale_colour_business_bright
+
+#' @rdname scale_business
+#' @export
+scale_colour_business_grey <- fa_scale_cols(fpal = ggpkt::pal_business_grey())
+
+#' @rdname scale_business
+#' @export
+scale_color_business_grey <- scale_colour_business_grey
+
+#' @rdname scale_business
+#' @export
+scale_colour_business_warm <- fa_scale_cols(fpal = ggpkt::pal_business_warm())
+
+#' @rdname scale_business
+#' @export
+scale_color_business_warm <- scale_colour_business_warm
+
+#' @rdname scale_business
+#' @export
+scale_colour_business_cool <- fa_scale_cols(fpal = ggpkt::pal_business_cool())
+
+#' @rdname scale_business
+#' @export
+scale_color_business_cool <- scale_colour_business_cool
+
+# ~~~~~~~~~~~~ scale fill ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_light <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_light())
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_dark <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_dark())
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_bright <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_bright())
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_grey <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_grey())
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_warm <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_warm())
+
+#' @rdname scale_business
+#' @export
+scale_fill_business_cool <- fa_scale_cols(scl = 'fill', fpal = ggpkt::pal_business_cool())
+
 
 #~~~~~~~~ continuous scale ~~~~~~~~~#--------------------------------------####
 
